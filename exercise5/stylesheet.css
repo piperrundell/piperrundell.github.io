@@ -1,10 +1,19 @@
 
   h1 {
-    color: red;
+    color: #805E45;
+    font-family: "courier new";
+  }
+
+  h4 {
+    color: #167782;
+  }
+
+  h3 {
+    color: #8A7566;
     font-family: "courier new";
   }
 
   p {
-    color: blue;
-    font-family: verdana
+    color: #607F82;
+    font-family: verdana;
   }
