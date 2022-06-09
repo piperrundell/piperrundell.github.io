@@ -1,0 +1,14 @@
+/*--stylesheet for default typographic hierarchy*/
+h1 {
+  font-family:georgia;
+  color:#2A4252;
+}
+
+h4 {
+  font-family:georgia;
+  color:#6BA8D1;
+}
+
+p {
+  font-family:verdana
+}
