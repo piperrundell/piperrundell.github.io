@@ -1,0 +1,39 @@
+/*boxes*/
+  /* play with these values */
+  #body {
+    background-color: #E8E8E8;
+    width: 940px;
+    border: 15px
+    border-color: #2A4252;
+    padding: 50px;
+    margin: 20px;
+    display: inline-block;
+    float: right}
+
+
+  #column {
+    background-color:#E8E8E8;
+    width:200px;
+    height: 800px;
+    border:15px black;
+    padding:50px;
+    margin: 20px;
+    display: inline-block;}
+
+
+/* body */
+p, ul{
+  font-family:verdana;
+}
+
+/*heading*/
+h1 {
+  font-family:georgia;
+  color:#2A4252;
+}
+
+/*subheading*/
+h3 {
+  font-family:georgia;
+  color:#6BA8D1;
+}
