@@ -1,0 +1,60 @@
+/* Grid setup */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu content1 content1 content1 content1 content1'
+    'menu content2 content2 content2 content2 content2'
+    'menu content3 content3 content3 content3 content3';
+  gap: 10px;
+  background-color: #E8E8E8;
+  padding: 10px;
+}
+
+.grid-container>div { /* select all divs inside the class */
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-area: header;
+}
+
+.item2 {
+  grid-area: menu;
+}
+
+.item3 {
+  grid-area: content1;
+}
+
+.item4 {
+  grid-area: content2;
+}
+
+.item5 {
+  grid-area: content3;
+}
+
+/* body */
+p, ul{
+  text-align: left;
+  font-size: 0.5em;
+  font-family:verdana;
+}
+
+/*heading*/
+h1 {
+  font-size:1.5em;
+  font-family:georgia;
+  color:#2A4252;
+}
+
+/*subheading*/
+h3 {
+  font-size: 0.6em
+  font-family:georgia;
+  color:#6BA8D1;
+}
