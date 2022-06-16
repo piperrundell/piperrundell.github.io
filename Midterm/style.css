@@ -1,0 +1,23 @@
+#grid {
+display: grid;
+height: 300px;
+grid-template: repeat(3, 1fr) / repeat(3, 1fr)
+
+}
+
+#grid > div {
+background-color: #A7F5F3;
+color: black;
+
+transition: background-color 1s;
+transition: color: red;
+transition-duration: 1s;
+}
+
+#grid:hover {
+background-color: red;
+}
+
+h1 {
+font-size: 3em
+}
