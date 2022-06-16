@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example</title>
+    <style>
+
+  #text {
+    width: 300px;
+    height: 100px;
+    padding: 1em;
+    background-color: white;
+    border-radius: 5px;
+    transform: translate(-10px,250px);
+    }
+
+#link {
+  width: 20px;
+  height: 20px;
+  padding: 1em;
+  background-color: #5B9EF0;
+  border-radius: 5px;
+  transform: translate(420px,600px);
+}
+
+  #background {
+	width: 600px;
+	height: 600px;
+	padding: 1em;
+	background-color: #5B9EF0;
+	border-radius: 5px;
+  transform: translate(400px,20px);
+  display: flex;
+  justify-content: center;
+
+	/* CSS Transitions */
+  /* note that we define the transition in the non-transitioned state*/
+
+	transition: background-color 1s;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.6, 0.1, 0.15, 0.8);
+
+  /*transition-delay: 1s;*/
+
+  /* SHORTHAND */
+  /*transition: background-color 1s linear 1s;*/
+
+	}
+
+	#background:hover {
+	background-color: #DB1F01;
+	}
+
+    </style>
+  </head>
+  <body>
+
+
+	<div id="background"> <img src="fish.png" height= 200px>
+    <div id="text"> “You want to me give you one of my special scales? Who do you think you are?” cried the Rainbow Fish. “Get away from me!” </div>
+  <div id="link"> <strong> --> <strong> </div>
+
+  </div>
+
+
+  </body>
+</html>
