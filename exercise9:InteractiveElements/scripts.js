@@ -9,7 +9,7 @@ function updateName(){
 }
 
 document.getElementById("mydiv").onclick = function(){
-  this.style.backgroundColor= "blue";
+  this.style.backgroundColor= "pink";
   this.style.color="white";
-  
+
 }
