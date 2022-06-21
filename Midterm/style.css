@@ -1,23 +1,90 @@
+body{
+  background-color: #9DD9F6;
+}
+
 #grid {
 display: grid;
 height: 300px;
 grid-template: repeat(3, 1fr) / repeat(3, 1fr)
-
 }
 
 #grid > div {
-background-color: #A7F5F3;
-color: black;
-
-transition: background-color 1s;
-transition: color: red;
-transition-duration: 1s;
+color:#152B4A;
 }
 
-#grid:hover {
+#redbackground {
+width: 100x;
+height: 500px;
+padding: 1em;
+background-color:#9DD9F6;
+color: white;
+border-radius: 5px;
+float: left;
+
+transition: background-color 0.7s;
+transition-timing-function: cubic-bezier(0.6, 0.1, 0.15, 0.8);
+}
+
+#redbackground:hover {
 background-color: red;
 }
 
-h1 {
-font-size: 3em
+#fish{
+  display: grid;
 }
+
+#fish:hover{
+  transform: rotateY(180deg);
+  transition-duration: 1.5s;
+}
+
+#swim{display: grid
+}
+#swim:hover{
+  transform: translate(1500px);
+  transition-duration: 6s;
+}
+
+#whiz{
+  display: grid;
+}
+#whiz:hover{
+  animation: back-and-forth 5s;
+}
+@keyframes back-and-forth {
+  25% { transform: translateY(200px);
+    }
+  50% { transform: rotate(180deg);
+    transition-duration: 0.5s;
+    }
+  75% {transform: translate(1000px);
+    }
+
+  100%{transform: translate(-400px);
+  }
+}
+
+#woohoo{
+  display: grid;
+}
+#woohoo:hover{
+  animation: spin 2s;
+}
+@keyframes spin {
+  100%{transform: rotate(360deg);
+  }
+}
+
+#arrow{
+  position: relative;
+  bottom:0;
+  right:0;
+}
+
+h1 {
+text-align: center;
+font-size: 3em;
+
+}
+
+h4 {text-align: center;}
