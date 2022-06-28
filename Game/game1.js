@@ -1,12 +1,18 @@
 //Shuffle API endpoint
 const endpoint = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
-
 console.log(endpoint);
 
-const shuffleButton = document.querySelector('#shuffle-deck');
-shuffleButton.addEventListener('click', getShuffle);
+let "HEARTS" = red
+let "DIAMONDS" = red
+let "SPADES" = black
+let "CLUBS" = black
 
-async function getShuffle(){
+const suit = fetch("cards.suit")
+
+const redButton = document.querySelector('#red');
+redButton.addEventListener('click', redChoice);
+
+async function redChoice(){
   try{
     const response = await fetch(endpoint);
     if(!response.ok){
