@@ -1,51 +1,44 @@
-//Shuffle Stuff //
-const shuffle = "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
-console.log(shuffle);
+// Draw Card Stuff //
+const endpoint = "https://deckofcardsapi.com/api/deck/new/draw/?count=1";
 
-const shuffleButton = document.querySelector('#shuffle-deck');
-shuffleButton.addEventListener('click', getShuffle);
-
-async function getShuffle(){
-  try{
-    const response = await fetch(shuffle);
+async function drawCard(cardColor){
+  try {
+    const response = await fetch(endpoint); //access endpoint
     if(!response.ok){
       throw Error(response.statusText);
     }
-    const json = await response.json()
-    displayShuffle(json);
+    const json = await response.json();
+    //console.log(json);
+    //displayCard(json);
+    let path = json.cards[0].image;
+    let suit = json.cards[0].suit;
+    console.log(json);
 
-  } catch (err) {
+
+    // update the image with the new card image from the API
+    cardImage.src = path;
+
+    if(cardColor == "red" && (suit == "HEARTS" || suit == "DIAMONDS")){
+      console.log("You guessed right!");
+      message.innerHTML="You guessed right!"
+    } else if (cardColor == "black" && (suit == "SPADES" || suit == "CLUBS")){
+      console.log("You guessed right!");
+      message.innerHTML="You guessed right!"
+    }
+    else {
+      console.log("You guessed wrong")
+      message.innerHTML="You guessed wrong! Try again!"
+    }
+
+  } catch(err){
     console.log(err);
     alert('failed');
   }
-  function displayShuffle(shuffle){
-    const shuffleText = document.querySelector('#js-quote-text');
-    shuffleText.textContent = "✓";
-  }
 }
+const cardImageHolder = document.getElementById('cardImage');
+const redButton = document.getElementById('red');
+const blackButton = document.getElementById('black');
+redButton.addEventListener('click', function() { drawCard("red"); } );
+blackButton.addEventListener('click', function(){drawCard("black");});
 
-// Draw Card Stuff //
-const drawCard = "https://deckofcardsapi.com/api/deck/new/draw/?count=1"
-console.log(drawCard);
-
-const drawButton = document.querySelector('#draw-card');
-drawButton.addEventListener('click', getCard);
-
-async function getCard(){
-  try{
-    const response = await fetch (drawCard);
-    if(!response.ok){
-      throw Error(response.statusText);
-    }
-    const json = await response.json()
-    displayCard(json);
-  }
-    catch (err) {
-      console.log(err);
-      alert('failed');
-    }
-  function displayCard(drawCard){
-    const cardReturn = document.querySelector('#js-quote-text');
-    cardReturn.textContent = "hi";
-  }
-}
+let message = document.getElementById('message')
